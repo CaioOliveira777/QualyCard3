@@ -1,11 +1,12 @@
-import 'package:qualycard/pages/login.page.dart';
-import 'package:qualycard/pages/reset-password.page.dart';
-import 'package:qualycard/pages/singup.page.dart';
-import './cards-content.dart';
+import 'package:qualycard/pages/email_senha/reset-password.page.dart';
+import 'package:qualycard/pages/email_senha/singup.page.dart';
+import 'cards-content.dart';
 import 'package:flutter/material.dart';
-import './radial-menu.dart';
+import 'radial-menu.dart';
 
 import 'package:url_launcher/url_launcher.dart';
+
+import '../agendamento/agendamento1.dart';
 
 _launchURL() async {
   const url = 'http://www.meuqualycard.com.br/';
@@ -22,13 +23,13 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final _transactions = [
+  final _cardsContent = [
     CardsContent(
       id: 't1',
-      title: 'Telemedicina',
-      subTitulo: 'Consulta médica on-line',
+      title: 'Unidades',
+      subTitulo: 'Encontre uma unidade',
       tela: 'SingupPage()',
-      logo: 'telemedicina.jpg',
+      logo: 'clinica.jpg',
     ),
     CardsContent(
       id: 't2',
@@ -101,7 +102,7 @@ class _MainScreenState extends State<MainScreen> {
         children: <Widget>[
           RadialMenu(),
           Column(
-            children: _transactions.map((tr) {
+            children: _cardsContent.map((tr) {
               return Card(
                 elevation: 7,
                 child: FlatButton(
@@ -109,11 +110,11 @@ class _MainScreenState extends State<MainScreen> {
                       children: <Widget>[
                         Container(
                           margin:
-                              EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                          padding: EdgeInsets.all(7),
+                              EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                          padding: EdgeInsets.all(0),
                           child: SizedBox(
-                            height: 70,
-                            width: 70,
+                            height: 80,
+                            width: 80,
                             child: Image.asset(tr.logo),
                           ),
                         ),
@@ -149,7 +150,7 @@ class _MainScreenState extends State<MainScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginPage(),
+                            builder: (context) => AgendamentoTela1(),
                           ),
                         );
                       } else if (tr.id == 't3') {

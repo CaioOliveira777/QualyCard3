@@ -1,22 +1,11 @@
-import 'package:qualycard/pages/main-screen.dart';
+import 'package:qualycard/pages/menu_principal/main-screen.dart';
 
-import './reset-password.page.dart';
+import 'reset-password.page.dart';
 
-import './singup.page.dart';
+import 'singup.page.dart';
 import 'package:flutter/material.dart';
 
-//import 'package:url_launcher/url_launcher.dart';
-
 import 'package:flutter/services.dart';
-
-/*_launchURL() async {
-  const url = 'http://www.meuqualycard.com.br/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}*/
 
 class LoginPage extends StatelessWidget {
   @override
@@ -94,12 +83,7 @@ class LoginPage extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   stops: [0.3, 1],
-                  colors: [
-                    Colors.teal[700],
-                    Colors.grey[600]
-                    //Color(),
-                    //Color(0XFFF92B7F),
-                  ],
+                  colors: [Colors.teal[700], Colors.grey[600]],
                 ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(5),
@@ -141,42 +125,6 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            /* Container(
-              height: 60,
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                color: Color(0xFF3C5A99),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
-                child: FlatButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Login com Facebook",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/fb-icon.png"),
-                          height: 28,
-                          width: 28,
-                        ),
-                      )
-                    ],
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-            ),*/
             SizedBox(
               height: 10,
             ),
