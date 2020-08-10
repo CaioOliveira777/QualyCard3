@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qualycard/pages/email_senha/singup.page.dart';
 
 class Agendar extends StatefulWidget {
   @override
@@ -115,7 +114,7 @@ class AgendarState extends State<Agendar> {
           },
         );
       },
-      items: <String>['12:12', '11:22', '13:12', '15:16']
+      items: <String>['12:12', '11:22', '13:12', '15:20']
           .map<DropdownMenuItem<String>>(
         (String value) {
           return DropdownMenuItem<String>(
@@ -131,65 +130,65 @@ class AgendarState extends State<Agendar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Meu QualyCard',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        elevation: 0.0,
-      ),
-      drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              title: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  FlatButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignupPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Contato',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
-          ],
+        elevation: 1.5,
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.teal[700]),
+        title: SizedBox(
+          width: 150,
+          child: Image.asset('logo-horizontal.png'),
         ),
       ),
       body: Container(
         margin: EdgeInsets.only(
-          top: 16,
-          left: 24,
-          right: 24,
-          bottom: 24,
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
         ),
         child: Form(
           key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              _buildEspecialidade(),
-              _buildProfissional(),
-              _buildData(),
-              _buildHora(),
-              SizedBox(height: 100),
+              Container(
+                child: Image.asset(
+                  'calendario3.jpg',
+                ),
+              ),
+              Container(
+                child: _buildEspecialidade(),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+              ),
+              Container(
+                child: _buildProfissional(),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+              ),
+              Container(
+                child: _buildData(),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+              ),
+              Container(
+                child: _buildHora(),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+              ),
+              SizedBox(height: 18),
               RaisedButton(
                 child: Text(
-                  'Enviar',
-                  style: TextStyle(color: Colors.blue, fontSize: 16),
+                  'Agendar',
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 ),
                 onPressed: () {
                   if (!_formKey.currentState.validate()) {

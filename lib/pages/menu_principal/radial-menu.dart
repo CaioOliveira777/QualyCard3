@@ -39,7 +39,7 @@ class _RadialMenuState extends State<RadialMenu> {
                 builder: (BuildContext context) {
                   return Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: EdgeInsets.symmetric(horizontal: 0),
                     child: FlatButton(
                       onPressed: () {
                         _launchURL();

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qualycard/pages/agendamento/acompanhar.dart';
 
-import '../email_senha/singup.page.dart';
 import 'agendar.dart';
 
 class AgendamentoTela1 extends StatelessWidget {
@@ -9,42 +8,13 @@ class AgendamentoTela1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Meu QualyCard',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        elevation: 0.0,
-      ),
-      drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              title: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  FlatButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignupPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Contato',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
-          ],
+        elevation: 1.5,
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.teal[700]),
+        title: SizedBox(
+          width: 150,
+          child: Image.asset('logo-horizontal.png'),
         ),
       ),
       body: Container(

@@ -24,7 +24,7 @@ class SignupPage extends StatelessWidget {
                 child: SizedBox(
                   width: 270,
                   height: 270,
-                  child: Image.asset('logo.png'),
+                  child: Image.asset('logo-vertical.png'),
                 ),
                 onPressed: () {
                   //_launchURL();
@@ -33,12 +33,12 @@ class SignupPage extends StatelessWidget {
               width: 200,
               height: 200,
               alignment: Alignment(0.0, 1.15),
-              decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: AssetImage(''),
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
+              //decoration: new BoxDecoration(
+              //image: new DecorationImage(
+              //  image: AssetImage(''),
+              //  fit: BoxFit.fitHeight,
+              //  ),
+              // ),
               /*child: Container(
                 height: 56,
                 width: 56,
