@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qualycard/pages/constantes/appBar2.dart';
 
 class Agendar extends StatefulWidget {
   @override
@@ -129,16 +130,7 @@ class AgendarState extends State<Agendar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 1.5,
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.teal[700]),
-        title: SizedBox(
-          width: 150,
-          child: Image.asset('logo-horizontal.png'),
-        ),
-      ),
+      appBar: AppBarConsts.appBar2,
       body: Container(
         margin: EdgeInsets.only(
           top: 0,

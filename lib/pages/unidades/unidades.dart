@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'unidades-content.dart';
+import 'package:qualycard/pages/constantes/appBar2.dart';
 
 class Unidades extends StatelessWidget {
   final _cardsContent = [
@@ -26,16 +27,7 @@ class Unidades extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 1.5,
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.teal[700]),
-        title: SizedBox(
-          width: 150,
-          child: Image.asset('logo-horizontal.png'),
-        ),
-      ),
+      appBar: AppBarConsts.appBar2,
       body: ListView(
         children: _cardsContent.map(
           (un) {
