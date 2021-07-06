@@ -1,6 +1,6 @@
 # qualycard
 
-A new Flutter project.
+Projeto de app Mobile para uma empresa de benefícios. O projeto foi cancelado por fatores externos.
 
 ## Getting Started
 
